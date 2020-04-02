@@ -1,0 +1,55 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.slider-wrapper{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  height: 80vh;
+  margin-top: 50px;
+}
+
+.images{
+  width: 80%;
+}
+
+.images img{
+  width: 100%;
+  display: none;
+}
+
+.images img.active{
+  display: block;
+}
+
+.nav{
+  width: 5%;
+  display: flex;
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.nav i:hover{
+  opacity: 0.6;
+}
+
+.nav i.active{
+  opacity: 0.6
+}
+
+.next,
+.prev{
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.next:hover,
+.prev:hover{
+  color: red;
+}
