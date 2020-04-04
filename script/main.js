@@ -57,54 +57,61 @@ $(document).ready(function(){
     imgToShow
   );
 
+
 function imgToShow() {
+  $('.images img').removeClass('active');
+  $('.nav i').removeClass('active');
+
   var imgSelector = $('.images img');
   var palliniSelector = $('.nav i');
 
-  var indicePallinaSelezionata = palliniSelector.index(this)+1;
-  var imgDaMostrare = palliniSelector.eq(indicePallinaSelezionata);
+  var indicePallinaSelezionata = $('.nav i').index(this);
 
-  console.log(indicePallinaSelezionata);
-  console.log(imgDaMostrare);
+  $('.images img').eq(indicePallinaSelezionata).addClass('active');
+  $(this).addClass('active');
 
 }
 
 
 
-
-
-
-
-
-  // var paLong = $('.nav i');
-  // console.log(long.length);
-  //
-  // for (var a = 0; a < paLong.length; a++) {
-  //   var pallino = long[a];
-  //   console.log(pallino);
-  //   pallino.click(
-  //     function () {
-  //
-  //       //salvo lo stato corrente degli elementi
-  //     var currentPallino = $('.nav i.active');
-  //     console.log("currentpallino: " + currentPallino);
-  //     currentPallino.removeClass('active');
-  //     pallino.addClass('active');
-
-
-
-      //rimuovo la classe active agli elementi attivi
-      // current.removeClass('active');
-      // currentPal.removeClass('active');
-
-      //do la classe active agli elementi cliccati
-      // pallino.addClass('active')
-
-
-//     }
-//   );
+//  function imgToShow() {
+//    $(this).addClass('active');
+//    $(this).siblings().removeClass("active");
+//   if ($(this).hasClass('first')) {
+//     $('.images img.first').addClass('active');
+//     $('.images img.first').siblings().removeClass('active');
+//   }else if ($(this).hasClass('due')) {
+//     $('.images img.due').addClass('active');
+//     $('.images img.due').siblings().removeClass('active');
+//   }else if ($(this).hasClass('tre')) {
+//     $('.images img.tre').addClass('active');
+//     $('.images img.tre').siblings().removeClass('active');
+//   }else if ($(this).hasClass('last')) {
+//     $('.images img.last').addClass('active');
+//     $('.images img.last').siblings().removeClass('active');
+//   }
 // }
 
+
+//
+//   console.log(indicePallinaSelezionata);
+//   console.log(imgDaMostrare);
+//
+// }
+
+//   function imgToShow() {
+//
+//   var paLong = $('.nav i');
+//   console.log(paLong.length);
+//
+//   for (var a = 0; a < paLong.length; a++) {
+//     var pallino = paLong[a];
+//     var imgDaMostrare = pallino;
+//     console.log(pallino);
+// }
+//
+//
+// }
 
 
 
